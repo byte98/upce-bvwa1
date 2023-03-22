@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komplexní tabulka</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 4px solid black;
+        }
+        table td{
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="5" rowspan="2"></td>
+                <td colspan="1" rowspan="2"></td>
+                <td colspan="2" rowspan="4"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2" rowspan="1"></td>
+                <td colspan="1" rowspan="4"></td>
+                <td colspan="2" rowspan="1"></td>
+                <td colspan="1" rowspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2"></td>
+                <td colspan="2" rowspan="1"></td>
+                <td colspan="1" rowspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="4" rowspan="1"></td>
+                <td colspan="2" rowspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="1"></td>
+                <td colspan="1" rowspan="1"></td>
+                <td colspan="5" rowspan="1"></td>
+                <td colspan="1" rowspan="1"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

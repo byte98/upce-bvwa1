@@ -1,0 +1,47 @@
+:root{
+    --accent: rgb(9, 134, 57);
+    --gray: rgb(192, 192, 192);
+    --grayer: rgb(216, 216, 216);
+}
+
+table{
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20% 20% 0 0;
+    border-bottom: 4px solid var(--accent);
+}
+
+table thead
+{
+    background-color: var(--accent);
+    border-radius: 20% 20% 0 0;
+    color: white;
+}
+
+table thead th:first-child{
+    border-radius: 5px 0 0 0;
+}
+
+table thead th:last-child{
+    border-radius: 0 5px 0 0;
+}
+
+table td,
+table th{
+    padding: 10px 40px;
+}
+
+tbody tr{
+    border-bottom: 2px solid var(--gray);
+}
+
+tbody tr:nth-child(2n)
+{
+    background-color: var(--grayer);
+}
+
+tbody tr:nth-child(2)
+{
+    color: var(--accent);
+    font-weight: bold;
+}
