@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzérie pardubice</title>
+</head>
+<body>
+    <h1>Pizzeré pardubice</h1>
+    <p>Sestavte si vlastní pizzu</p>
+    <form>
+        <fieldset>
+            <legend>Informace o vás</legend>
+            <label>
+                Jméno: <input type="text"/>
+            </label>
+            <label>
+                Adresa: <input type="text"/>
+            </label>
+            <label>
+                E-mail: <input type="email"/>
+            </label>
+            <label>
+                Dodání - instrukce:
+                <textarea maxlength="400" placeholder="Ne více než 400 znaků">
+                </textarea>
+            </label>
+        </fieldset>
+    <h2>Upravte si pizzu</h2>
+        <fieldset>
+            <legend>Pizza specifikace</legend>
+            <fieldset>
+                <legend>Těsto <i>(Vyberte jednu možnost)</i>:</legend>
+                <label>
+                    <input type="radio" value="Clasické bílé"/>
+                    Clasické bílé
+                </label>
+                <label>
+                    <input type="radio" value="Vícezrnné"/>
+                    Vícezrnné
+                </label>    
+                <label>
+                    <input type="radio" value="Sýrové těsto" />
+                    Sýrové těsto
+                </label>
+                <label>
+                    <input type="radio" value="Gluten-free" />
+                    Gluten-free
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Navrch <i>(Vyberte si kolik chcete)</i>:</legend>
+                <label>
+                    <input type="checkbox" checked/>
+                    Tomatová omáčka
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Sýrová omáčka
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Mozarella sýr
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Pepperoni
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Houby
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Papričky
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Ančovičky
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Počet</legend>
+                <label>
+                    Kolik pizz:
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </label>
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>

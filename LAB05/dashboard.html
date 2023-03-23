@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="dashboard.css">
+	<script>
+		function showPage(pageId) {
+			// Skryje všechny sekce
+			var sections = document.getElementsByTagName("section");
+			for (var i = 0; i < sections.length; i++) {
+				sections[i].style.display = "none";
+			}
+
+			// Zobrazí požadovanou sekci
+			document.getElementById(pageId).style.display = "block";
+
+			// Obarví požadované tlačítko v navigaci
+			var links = document.getElementsByTagName("a");
+			for (var i = 0; i < links.length; i++) {
+				if (links[i].getAttribute("href").substring(1) == pageId) {
+					links[i].classList.add("active");
+				} else {
+					links[i].classList.remove("active");
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Dashboard</h1>
+		<nav>
+			<ul>
+				<li><a href="#home" class="active" onclick="showPage('home'); return false;">Home</a></li>
+				<li><a href="#contact" onclick="showPage('contact'); return false;">Contact</a></li>
+				<li><a href="#about" onclick="showPage('about'); return false;">About Us</a></li>
+				<li><a href="#messages" onclick="showPage('messages'); return false;">Messages</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="home" style="display:block;">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Team</th>
+						<th>All Star</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>John Doe</td>
+						<td>Red Sox</td>
+						<td>Yes</td>
+						<td><button class="remove">×</button></td>
+					</tr>
+					<tr>
+						<td>Jane Doe</td>
+						<td>Yankees</td>
+						<td>No</td>
+						<td><button class="remove">×</button></td>
+					</tr>
+					<tr>
+						<td>Mike Smith</td>
+						<td>Dodgers</td>
+						<td>Yes</td>
+						<td><button class="remove">×</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="box info">
+				<p>This is an information box.</p>
+			</div>
+			<div class="box success">
+				<p>This is a success box.</p>
+			</div>
+			<div class="box warning">
+				<p>This is a warning box.</p>
+			</div>
+			<div class="box error">
+				<p>This is an error box.</p>
+			</div>
+		</section>
+		<section id="contact">
+			<h2>Contact Us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet felis et velit posuere vehicula. Aliquam erat volutpat. Nullam aliquam, lacus vel luctus aliquet, diam diam imperdiet odio, eu eleifend elit urna eget libero. Sed hendrerit nisi at tortor euismod, in tincidunt nunc accumsan. Vivamus pulvinar ex sed arcu vestibulum, eget hendrerit orci bibendum. Integer eleifend turpis in odio tincidunt, sit amet rhoncus enim placerat. Suspendisse egestas enim sit amet neque mollis lacinia. Suspendisse condimentum ullamcorper purus, vel facilisis odio. Curabitur vestibulum tristique tortor, non suscipit magna luctus vel.</p>
+		</section>
+		<section id="about">
+			<h2>About Us</h2>
+			<p>Nulla facilisi. Nunc id ipsum ut nisl iaculis laoreet. In sit amet neque sed lectus feugiat fringilla ut eu magna. Nullam auctor quam eu velit suscipit bibendum. Donec volutpat massa a velit sagittis, in malesuada nunc consequat. In sodales enim et lacinia finibus. Phasellus hendrerit felis id tincidunt egestas. Duis vel eros et ex varius suscipit. Nulla vel gravida purus. Sed posuere sapien sit amet nisl interdum efficitur. Proin lobortis, mauris vel ultrices iaculis, tellus nibh tincidunt nulla, quis ultricies odio mi vel sapien. Ut eleifend elit sed nisi faucibus, vel tempus dolor efficitur. Aliquam scelerisque porttitor felis, at iaculis sapien vehicula sit amet.</p>
+		</section>
+		<section id="messages">
+			<h2>Messages</h2>
+			<p>Sed mollis magna vitae sapien cursus, sit amet blandit velit dictum. Aliquam non dolor non nulla sollicitudin rutrum. Nam nec tellus vel risus imperdiet bibendum vel quis turpis. Pellentesque molestie interdum ipsum, at placerat urna maximus sit amet. Aliquam vel purus consectetur, eleifend orci quis, pulvinar libero. Sed varius ut lorem a vestibulum. Duis suscipit massa et velit ultrices, vitae tincidunt ex ultrices. Phasellus feugiat felis sit amet ipsum efficitur, ut sagittis orci aliquet. Nulla id turpis id est vestibulum interdum in quis erat. In hac habitasse platea dictumst. Praesent fringilla felis in sapien interdum posuere. Duis vestibulum quam sit amet purus dictum, ac suscipit justo lobortis. Nunc posuere turpis in ex commodo interdum. Nulla at odio nec ipsum dictum finibus. Duis pretium leo vitae magna malesuada, a convallis ante vestibulum.</p>
+		</section>
+	</main>
+</body>
+</html>

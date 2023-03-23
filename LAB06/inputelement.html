@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: inline-block;"><button>&lt;&lt;</button></div>
+    <div style="display: inline-block;">
+        <input type="range" min="0" max="5" value="5" list="valueyears">
+        <datalist id="valueyears" style="display: flex; flex-direction: row; justify-content: space-between;">
+            <option value="1910">1910</option>
+            <option hidden value="1947">1947</option>
+            <option value="1949">1949</option>
+            <option hidden value="1968">1968</option>
+            <option value="2021">2021</option>
+        </datalist>
+    </div>
+    <div style="display: inline-block;"><button>&gt;&gt;</button></div>
+</body>
+</html>
