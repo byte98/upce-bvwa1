@@ -1,0 +1,23 @@
+.todolist ul{
+    list-style: none;
+    padding: 0px;
+}
+
+.todolist > button{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.todolist ul li{
+    padding: 10px 5px 10px 10px;
+}
+
+.todolist ul li:nth-child(2n)
+{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.todolist ul button{
+    float: right;
+    margin-top: -7px;
+}

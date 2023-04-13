@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programy v JavaScriptu</title>
+</head>
+<body>
+    <h1>Programy v jazyce JavaScript</h1>
+    <p>Zvolte program:
+    <select id="program">
+        <option value="01">01 - Taxi</option>
+        <option value="02">02 - Kalkulačka</option>
+        <option value="03">03 - Kvadratická rovnice</option>
+        <option value="04">04 - Největší společný dělitel</option>
+        <option value="05">05 - Ciferný součet</option>
+        <option value="06">06 - Kreslení čtverce</option>
+        <option value="07">07 - PIN</option>
+        <option value="08">08 - Faktoriál</option>
+    </select>
+    </p>
+    <p>
+    <button type="button" id="button">Spustit</button>
+    </p>
+    <p>
+    <i>Program se spustí v konzoli.</i>
+    </p>
+    <script src="./ex01.js"></script>
+    <script src="./ex02.js"></script>
+    <script src="./ex03.js"></script>
+    <script src="./ex04.js"></script>
+    <script src="./ex05.js"></script>
+    <script src="./ex06.js"></script>
+    <script src="./ex07.js"></script>
+    <script src="./ex08.js"></script>
+    <script>
+        // Obsluzny skript
+        document.getElementById("button").addEventListener("click", function(){
+            let select = document.getElementById("program");
+            switch (select.value)
+            {
+                case "01": ex01(); break;
+                case "02": ex02(); break;
+                case "03": ex03(); break;
+                case "04": ex04(); break;
+                case "05": ex05(); break;
+                case "06": ex06(); break;
+                case "07": ex07(); break;
+                case "08": ex08(); break;
+            }
+        });
+    </script>
+</body>
+</html>
