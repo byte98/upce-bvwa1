@@ -1,0 +1,106 @@
+<!--
+ Copyright (C) 2023 Jiri Skoda <jiri.skoda@student.upce.cz>
+ 
+ This file is part of b22l-skoda-bvwa1-semestral-project.
+ 
+ b22l-skoda-bvwa1-semestral-project is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 2 of the License, or
+ (at your option) any later version.
+ 
+ b22l-skoda-bvwa1-semestral-project is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with b22l-skoda-bvwa1-semestral-project.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/water.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/styles/colors.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/styles/colors.dark.css" type="text/css" rel="stylesheet" media="all and (prefers-color-scheme: dark)">
+    <link href="/styles/global.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/styles/global.mobile.css" type="text/css" rel="stylesheet" media="all and (max-width: 768px)">
+    <link href="/styles/event.css" type="text/css" rel="stylesheet" media="all">
+    <title>Kalendář</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Kalendář
+            <span>
+                <span><%= username %></span>
+                <form action="/logout" method="POST" id="logout">
+                    <a href="#">Odhlásit se</a>
+                </form>
+            </span>
+        </h1>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <h2><%= eventName %></h2>
+            <% if (typeof(error) != "undefined") {%>
+            <aside class="message error">
+                <%= error %>
+            </aside>
+            <% } %>
+            <% if (typeof(info) != "undefined") {%>
+                <aside class="message info">
+                    <%= info %>
+                </aside>
+            <% } %>
+            <form <% if(hasData){ %> method="POST" action="/my/event/<%=eventFormId%>" <% } else {%> method="POST" action="/my/event?_method=PUT" <% } %>>
+                <label>
+                    Název
+                    <input type="text" <% if (hasData){ %> value="<%=eventFormName%>"<%}%> name="name" required>
+                </label>
+                <p>Barva</p>
+                <label>
+                    <input type="radio" <% if ((hasData && eventFormColor=="NONE") || hasData == false){ %> checked <% } %> name="color" value="NONE" required>
+                    <span class="color"></span>Žádná
+                </label>
+                <label>
+                    <input type="radio" <% if (hasData && eventFormColor=="RED"){ %> checked <% } %> name="color" value="RED" required>
+                    <span class="color red"></span>Červená
+                </label>
+                <label>
+                    <input type="radio" <% if (hasData && eventFormColor=="YELLOW"){ %> checked <% } %> name="color" value="YELLOW" required>
+                    <span class="color yellow"></span>Žlutá
+                </label>
+                <label>
+                    <input type="radio" <% if (hasData && eventFormColor=="GREEN"){ %> checked <% } %> name="color" value="GREEN" required>
+                    <span class="color green"></span>Zelená
+                </label>
+                <label>
+                    <input type="radio" <% if (hasData && eventFormColor=="BLUE"){ %> checked <% } %> name="color" value="BLUE" required>
+                    <span class="color blue"></span>Modrá
+                </label>
+                <label>
+                    Datum a čas
+                    <input type="date" value="<%=eventFormDate%>" required name="date">
+                    <input type="time" value="<%=eventFormTime%>" required name="time">
+                </label>
+                <button type="reset">Zpět</button>
+                <button type="submit"><%= submitText %></button>
+            </form>
+        </section>
+    </main>
+    <script src="/scripts/jquery-3.6.4.min.js"></script>
+    <script src="/scripts/logout.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").on("reset", function(){
+                window.location.href = "<%=backLink%>";
+            });
+        });
+    </script>
+</body> 
+</html>

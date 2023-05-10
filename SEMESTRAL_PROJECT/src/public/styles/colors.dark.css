@@ -1,0 +1,33 @@
+/**
+ * Copyright (C) 2023 Jiri Skoda <jiri.skoda@student.upce.cz>
+ * 
+ * This file is part of b22l-skoda-bvwa1-semestral-project.
+ * 
+ * b22l-skoda-bvwa1-semestral-project is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * b22l-skoda-bvwa1-semestral-project is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with b22l-skoda-bvwa1-semestral-project.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+ :root{
+    --message-info: #00243c;
+    --message-info-border: #0066c0;
+    --message-error: #4a1d1d;
+    --message-error-border: #9c0202;
+    --color-red: #5a0000;
+    --color-yellow: #514800;
+    --color-blue: #003a44;
+    --color-green: #1c3100;
+    --color-border-red: #b30000;
+    --color-border-yellow: #887801;
+    --color-border-blue: #02839a;
+    --color-border-green: #518f01;
+ }
